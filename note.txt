@@ -1,0 +1,35 @@
+npm start vs npm dev
+
+npm start
+    - When running the npm start command from the root directory of the project, node will look for a 'scripts' object in the package.json file. Once found with the key 'start', it will run the command that is specified as its value.
+
+npm dev
+    - indicates that we're running the project in development mode and we're using 'nodemon' to do so. 
+    - nodemon allows us to make changes without having to restart the server after each change.
+
+
+node_modules
+    - packages that npm installs that allow our application and all of its dependencies to run properly.
+
+package-lock.json  
+    - locks in the version of the packages that we're using. 
+    - version control system that acts as a failsafe.
+
+Express
+    - lightweight web application framework used to help organize our application into a MVC architecture within our server.
+        - MVC: Model View Controller
+    - not a model view controller framework by itself. Still need to use our own ORM(Object-relational mapping) library.
+        - *Sequelize 
+
+
+
+Sequelize =>
+    - Sequelize is a JS library that we'll use to manage our PostgreSQL databases
+    - Sequelize is an object relation mapper(ORM) - meaning that it sends ouir data to our databases using JS object syntax
+    - Sequelize is all about Models. Models are how we shape the data we'll be sending to our databases.
+    - Our models are both the objects that we'll interact with in our application as well as the primary tables that we'll create and amanged in our databases
+
+PG =>
+    - The pg package allows us to write the dialect that sequelize needs to speak to our PostgreSQL databases
+
+    DB_CONNECTION_STRING = postgres://postgres:Cyanide13@localhost:5432/pie-api
